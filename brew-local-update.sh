@@ -2,7 +2,10 @@
 
 version="latest"
 
-latest_tarball=`curl -s https://registry.npm.taobao.org/whistle/$version | grep -E -o '"tarball":"[^"]+"'| cut -d'"' -f 4`
+npm_registry="https://registry.npmjs.org"
+# taobao_npm_registry="https://registry.npm.taobao.org"
+
+latest_tarball=`curl -s $npm_registry/whistle/$version | grep -E -o '"tarball":"[^"]+"'| cut -d'"' -f 4`
 latest_sha256=""
 formula=`brew --repo`/Library/Taps/homebrew/homebrew-core/Formula/whistle.rb
 
@@ -25,7 +28,10 @@ echo "latest_tarball=$latest_tarball"
 echo "local_sha256=$local_sha256"
 echo "latest_sha256=$latest_sha256"
 
-if [[ $local_tarball == $latest_tarball ]]; then
+latest_tarball_basename=`basename $latest_tarball`
+local_tarball_basename=`basename $local_tarball`
+
+if [[ $local_tarball_basename == $latest_tarball_basename ]]; then
   echo '👋 no need to update'
   exit 0
 fi
@@ -33,5 +39,5 @@ fi
 sed -i.bak -E "s,url \"$local_tarball\",url \"$latest_tarball\"," $formula
 sed -i.bak -E "s,sha256 \"$local_sha256\",sha256 \"$latest_sha256\"," $formula
 
-echo "\n👍 $formula\n"
+echo "👍 $formula"
 cat $formula
