@@ -14,7 +14,10 @@ curl -s $remote_formula_url -o $formula_filename
 remote_sha256=`grep -E -m 1 'sha256 ".+"' $formula_filename | cut -d'"' -f 2`
 remote_tarball=`grep -E -m 1 'url "https:[^"]+"' $formula_filename | cut -d'"' -f 2`
 
-if [[ $remote_tarball == $latest_tarball ]]; then
+remote_tarball_basename=`basename $remote_tarball`
+latest_tarball_basename=`basename $latest_tarball`
+
+if [[ $remote_tarball_basename == $latest_tarball_basename ]]; then
   echo '👋 no need to pr'
   exit 0
 fi
