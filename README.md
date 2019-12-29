@@ -21,7 +21,7 @@ whistle npm更新版本后，需要更新[homebrew-core]的whistle描述文件�
 在macOS/Linux环境下执行以下命令：
 
 ```sh
-curl -fsSL https://raw.githubusercontent.com/echopi/homebrew-whistle/master/brew-pr.sh | bash -s --
+curl -s https://raw.githubusercontent.com/echopi/homebrew-whistle/master/brew-pr.sh | bash -s --
 ```
 
 非macOS/Linux环境需要手动提交pr到[homebrew-core]。通过执行node脚本获得新的url、sha256：

@@ -24,7 +24,7 @@ brew upgrade whistle
 
 ```sh
 # 更新本地whistle描述文件
-curl -fsSL https://raw.githubusercontent.com/echopi/homebrew-whistle/master/brew-local-update.sh | bash -s --
+curl -s https://raw.githubusercontent.com/echopi/homebrew-whistle/master/brew-local-update.sh | bash -s --
 
 # 更新
 brew upgrade whistle
