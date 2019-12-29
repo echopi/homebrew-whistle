@@ -135,7 +135,7 @@ brew bump-formula-pr --strict whistle --url=$url --sha256=$sha256
 
 [Contributing to Homebrew]: https://github.com/Homebrew/homebrew-core/blob/master/CONTRIBUTING.md
 [homebrew-npm-noob]: https://github.com/zmwangx/homebrew-npm-noob
-[homebrew-core]: git@github.com:Homebrew/homebrew-core.git
+[homebrew-core]: https://github.com/Homebrew/homebrew-core
 [Homebrew]: https://brew.sh/
 [whistle.rb]: https://github.com/Homebrew/homebrew-core/blob/master/Formula/whistle.rb
 [How to Create and Maintain a Tap]: https://docs.brew.sh/How-to-Create-and-Maintain-a-Tap
