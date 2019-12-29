@@ -1,7 +1,7 @@
 # whistle ❤️ Homebrew
 
-> [whistle]: HTTP, HTTP2, HTTPS, Websocket debugging proxy
-> [Homebrew]: The Missing Package Manager for macOS (or Linux)
+* [whistle]: HTTP, HTTP2, HTTPS, Websocket debugging proxy
+* [Homebrew]: The Missing Package Manager for macOS (or Linux)
 
 ## 如何安装
 
@@ -20,12 +20,14 @@ w2 start
 brew upgrade whistle
 ```
 
-如果whistle npm 版本更新了，whistle Homebrew 未更新，可以通过以下方式安装最新版本：
+**如果whistle npm 版本更新了，whistle Homebrew 未更新，可以通过以下方式安装最新版本：**
 
 ```sh
 # 更新本地whistle描述文件
+curl -fsSL https://raw.githubusercontent.com/echopi/homebrew-whistle/master/brew-local-update.sh | bash -s --
 
-
+# 更新
+brew upgrade whistle
 ```
 
 ## 如何发布whistle到Homebrew
