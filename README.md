@@ -16,7 +16,7 @@ npm install
 
 ## 提交pr更新Homebrew whistle版本
 
-whistle npm更新版本后，需要更新[homebrew-core]的whistle描述文件。
+whistle npm更新版本后，需要更新 [homebrew-core](git@github.com:Homebrew/homebrew-core.git) 的whistle描述文件。
 
 在macOS/Linux环境下执行以下命令：
 
@@ -24,7 +24,7 @@ whistle npm更新版本后，需要更新[homebrew-core]的whistle描述文件�
 curl -s https://raw.githubusercontent.com/echopi/homebrew-whistle/master/brew-pr.sh | bash -s --
 ```
 
-非macOS/Linux环境需要手动提交pr到[homebrew-core]。通过执行node脚本获得新的url、sha256：
+非macOS/Linux环境需要手动提交pr到 [homebrew-core](git@github.com:Homebrew/homebrew-core.git)。通过执行node脚本获得新的url、sha256：
 
 ```sh
 node brew-pr.js
