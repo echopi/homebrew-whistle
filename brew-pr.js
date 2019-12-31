@@ -25,7 +25,7 @@ async function main() {
   const {tarball, shasum /* SHA-1 */} = data.dist;
 
   if (remote_tarball === tarball) {
-    console.log('no need to pr!');
+    console.log('👋 no need to pr!');
     return;
   }
   const digester = crypto.createHash('sha256').setEncoding('hex');
