@@ -2,8 +2,11 @@
 
 version="latest"
 
+npm_registry="https://registry.npmjs.org"
+# npm_registry="https://registry.npm.taobao.org"
+
 remote_formula_url="https://raw.githubusercontent.com/Homebrew/homebrew-core/master/Formula/whistle.rb"
-latest_tarball=`curl -s https://registry.npm.taobao.org/whistle/$version | grep -E -o '"tarball":"[^"]+"'| cut -d'"' -f 4`
+latest_tarball=`curl -s $npm_registry/whistle/$version | grep -E -o '"tarball":"[^"]+"'| cut -d'"' -f 4`
 latest_sha256=""
 
 tmp_dir=`mktemp -d`

@@ -3,7 +3,7 @@
 version="latest"
 
 npm_registry="https://registry.npmjs.org"
-# taobao_npm_registry="https://registry.npm.taobao.org"
+# npm_registry="https://registry.npm.taobao.org"
 
 latest_tarball=`curl -s $npm_registry/whistle/$version | grep -E -o '"tarball":"[^"]+"'| cut -d'"' -f 4`
 latest_sha256=""

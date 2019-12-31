@@ -4,8 +4,8 @@ const crypto = require('crypto');
 const fetch = require('node-fetch');
 const {execSync} = require('child_process');
 
-// const npm_registry = 'https://registry.npmjs.org';
-const npm_registry = 'https://registry.npm.taobao.org';
+const npm_registry = 'https://registry.npmjs.org';
+// const npm_registry = 'https://registry.npm.taobao.org';
 
 const repo = execSync('brew --repo').toString().trim();
 const formula = `${repo}/Library/Taps/homebrew/homebrew-core/Formula/whistle.rb`;

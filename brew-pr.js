@@ -4,8 +4,8 @@ const crypto = require('crypto');
 const fetch = require('node-fetch');
 const {execSync} = require('child_process');
 
-// const npm_registry = 'https://registry.npmjs.org';
-const npm_registry = 'https://registry.npm.taobao.org';
+const npm_registry = 'https://registry.npmjs.org';
+// const npm_registry = 'https://registry.npm.taobao.org';
 
 const remote_formula_url = 'https://raw.githubusercontent.com/Homebrew/homebrew-core/master/Formula/whistle.rb';
 const brew_existed = '0' !== execSync(`command -v brew >/dev/null 2>&1 || echo '0'`).toString().trim();
