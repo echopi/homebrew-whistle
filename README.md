@@ -8,10 +8,32 @@ script & docs for homebrew whistle
 * [更新whistle官方描述文件](./brew-pr.sh)
 * [更新whistle的本地描述文件](./brew-local-update.sh)
 
-## 安装依赖
+## 常见问题
+
+1. 优先使用Homebrew内置的nodejs，Homebrew nodejs 默认命令在 `/usr/local/bin/node`
 
 ```sh
-npm install
+export PATH=/usr/local/bin:$PATH w2 start/stop/restart
+```
+
+2. 如果whistle npm 版本更新了，whistle Homebrew 未更新，可以通过以下方式安装最新版本：
+
+```sh
+# 更新本地whistle描述文件
+curl -s https://raw.githubusercontent.com/echopi/homebrew-whistle/master/brew-local-update.sh | bash -s --
+
+# 更新
+brew upgrade whistle
+```
+
+3. 更新Homebrew nodejs版本
+
+```sh
+brew list node
+brew info node
+
+brew update
+brew upgrade node
 ```
 
 ## 提交pr更新Homebrew whistle版本
@@ -27,6 +49,7 @@ curl -s https://raw.githubusercontent.com/echopi/homebrew-whistle/master/brew-pr
 非macOS/Linux环境需要手动提交pr到 [homebrew-core]。通过执行node脚本获得新的url、sha256：
 
 ```sh
+yarn
 node brew-pr.js
 ```
 
