@@ -30,7 +30,7 @@ curl -s $latest_tarball -o $filename
 if command -v shasum >/dev/null 2>&1; then
   latest_sha256=`shasum -a 256 $filename | cut -d ' ' -f 1`
 else
-  latest_sha256=`sha256 $filename | cut -d ' ' -f 1`
+  latest_sha256=`sha256sum $filename | cut -d ' ' -f 1`
 fi
 
 echo "remote_tarball=$remote_tarball"
