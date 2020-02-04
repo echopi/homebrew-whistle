@@ -143,8 +143,6 @@ brew 提供了命令，[更多](https://github.com/Homebrew/homebrew-core/blob/m
 brew bump-formula-pr --strict whistle --url=$url --sha256=$sha256
 ```
 
-以上命令可以通过 [brew-pr.js] 来生成。
-
 ## 参考
 
 * [Node for Formula Authors](https://docs.brew.sh/Node-for-Formula-Authors)
@@ -159,5 +157,5 @@ brew bump-formula-pr --strict whistle --url=$url --sha256=$sha256
 [whistle.rb]: https://github.com/Homebrew/homebrew-core/blob/master/Formula/whistle.rb
 [How to Create and Maintain a Tap]: https://docs.brew.sh/How-to-Create-and-Maintain-a-Tap
 [whistle]: https://github.com/avwo/whistle
-[brew-pr.js]: ./brew-pr.js
-[brew-local-update.js]: ./brew-local-update.js
+[brew-pr.sh]: ./brew-pr.sh
+[brew-local-update.sh]: ./brew-local-update.sh

@@ -16,7 +16,7 @@ script & docs for homebrew whistle
 export PATH=/usr/local/bin:$PATH w2 start/stop/restart
 ```
 
-2. 如果whistle npm 版本更新了，whistle Homebrew 未更新，可以通过以下方式安装最新版本：
+2. 如果whistle npm版本更新了，whistle Homebrew未更新，可以通过以下方式安装最新版本：
 
 ```sh
 # 更新本地whistle描述文件
