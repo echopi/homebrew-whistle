@@ -35,8 +35,8 @@ async function main() {
       const sha256 =  digester.read();
       const cmd = get_pr_cmd(url, sha256);
       if (brew_existed) {
-        execSync(cmd);
         console.log(cmd);
+        execSync(cmd);
       } else {
         console.error(`[ERROR] exec the following command by brew on macOS or Linux: ${cmd}`);
       }

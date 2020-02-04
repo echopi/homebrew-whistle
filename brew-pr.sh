@@ -38,9 +38,10 @@ echo "latest_tarball=$latest_tarball"
 echo "remote_sha256=$remote_sha256"
 echo "latest_sha256=$latest_sha256"
 
+pr_cmd="brew bump-formula-pr --strict whistle --url=${latest_tarball} --sha256=${latest_sha256}"
+echo $pr_cmd
 if command -v brew >/dev/null 2>&1; then
-  brew bump-formula-pr --strict whistle --url=${latest_sha256} --sha256=${latest_sha256}
+  $pr_cmd
 else
-  echo "💔 [ERROR] exec the following command by brew on macOS or Linux:"
-  echo "brew bump-formula-pr --strict whistle --url=${latest_sha256} --sha256=${latest_sha256}"
+  echo "💔 [ERROR] exec the above command on macOS or Linux:"
 fi
