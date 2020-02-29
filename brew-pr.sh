@@ -33,15 +33,15 @@ else
   latest_sha256=`sha256sum $filename | cut -d ' ' -f 1`
 fi
 
-echo "current_tarball=$current_tarball"
-echo "latest_tarball=$latest_tarball"
-echo "current_sha256=$current_sha256"
-echo "latest_sha256=$latest_sha256"
+echo "[INFO] current_tarball=$current_tarball"
+echo "[INFO] latest_tarball=$latest_tarball"
+echo "[INFO] current_sha256=$current_sha256"
+echo "[INFO] latest_sha256=$latest_sha256"
 
 pr_cmd="brew bump-formula-pr --strict whistle --url=${latest_tarball} --sha256=${latest_sha256}"
-echo $pr_cmd
+echo "[INFO] exec: $pr_cmd"
 if command -v brew >/dev/null 2>&1; then
   $pr_cmd
 else
-  echo "💔 [ERROR] exec the above command on macOS or Linux:"
+  echo "[ERROR] 💔 exec the above command on macOS or Linux:"
 fi
